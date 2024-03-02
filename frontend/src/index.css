@@ -3,6 +3,7 @@
 :root {
     --pink-color: #d9176d;
     --black-color: #010101;
+    --white-color: #fff;
     --transition: all 300ms ease-in-out;
 }
 
@@ -52,6 +53,11 @@ input {
     font-size: 1.6rem;
 }
 
+.text-black {
+    color: var(--black-color);
+}.text-pink {
+    color: var(--pink-color);
+}
 .text-capitalize {
     text-transform: capitalize;
 }
@@ -80,7 +86,9 @@ input {
     display: flex;
     align-items: center;
 }
-
+.flex-column {
+    flex-direction: column;
+}
 .flex-sb {
     justify-content: space-between;
 }
@@ -92,15 +100,12 @@ input {
 .grid {
     display: grid;
 }
-
+.bg-white {
+    background-color: var(--white-color);
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.section-title h2 {
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 18px 0 24px 0;
-}

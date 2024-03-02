@@ -56,8 +56,7 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
 def list_users(db: Session = Depends(get_db)):
     users_list = actions.get_all_users(db)
     for user in users_list:
-        print(
-            f"list-users Username details: {user.id}")
+        print(f"list-users Username details: {user.username}")
 
     if not users_list:
         print("no users exist yet")

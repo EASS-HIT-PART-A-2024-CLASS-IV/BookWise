@@ -58,8 +58,6 @@ const BookPage = ({ isLoggedIn }) => {
             <header>
               <AppNavbar isLoggedIn={isLoggedIn} userId={userId} handleLogoutSuccess={handleLogoutSuccess} />
               <div className='header-content3 flex flex-c text-left '>
-              <h3 className='header-title text-capitalize'>this is title</h3><br /><br />
-
                 <h3 className='header-title text-capitalize'>{book.volumeInfo.title}</h3><br /><br />
               </div>
             </header>            

@@ -4,7 +4,7 @@ import AppNavbar from '../components/Navbar';
 import './style.css';
 
 
-const RegistrationForm = ({ onRegister }) => {
+const RegistrationForm = ({  }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -22,7 +22,6 @@ const RegistrationForm = ({ onRegister }) => {
 
             if (response.ok) {
                 console.log('User registered successfully');
-                onRegister(); 
                 navigate('/login');
 
             } else {

@@ -14,11 +14,15 @@ const AppNavbar = ({ isLoggedIn, userId, handleLogoutSuccess }) => {
         window.location.reload();
     };
 
+    const handleGoHomeClick = () => {
+        navigate('/');
+    };
+
     return (
         <nav className='navbar' id="navbar">
             <ul>
                 <li>
-                    <Link to="/" className='navbar-brand flex'>
+                    <Link to="/" className='navbar-brand flex' onClick={handleGoHomeClick}>
                         <img src={logo1} alt="logo" />
                         <span>BOOKWISE</span>
                     </Link>

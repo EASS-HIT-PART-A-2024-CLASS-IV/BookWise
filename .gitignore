@@ -1,0 +1,51 @@
+**/node_modules/
+
+**/.env
+
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+
+# runtime data
+**/*.log
+**/*.log.*
+**/*.pid
+**/*.seed
+**/*.pid.lock
+
+# OS
+**/.DS_Store
+**/.vscode/
+**/.idea/
+**/*.iml
+**/.venv/
+**/.pytest_cache/
+**/__pycache__/
+**/.pytest_cache/
+
+# database dump files
+**/*.sql
+
+# Docker-specific files
+**/docker-compose.override.yml
+**/.dockerignore
+**/.docker/
+**/Dockerfile
+**/docker-compose.yml
+**/.dockerignore
+
+# dependency lock
+**/yarn.lock
+**/package-lock.json
+
+**/docs/
+
+**/build/
+**/dist/
+**/out/
+**/public/
+
+# user-specific IDE settings
+**/.vscode/
+**/.idea/

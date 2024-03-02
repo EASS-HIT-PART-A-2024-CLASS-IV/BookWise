@@ -31,8 +31,6 @@
 **/docker-compose.override.yml
 **/.dockerignore
 **/.docker/
-**/Dockerfile
-**/docker-compose.yml
 **/.dockerignore
 
 # dependency lock

@@ -24,14 +24,11 @@
 **/__pycache__/
 **/.pytest_cache/
 
-# database dump files
-**/*.sql
-
-# Docker-specific files
-**/docker-compose.override.yml
-**/.dockerignore
-**/.docker/
-**/.dockerignore
+# docker 
+/build/
+/dist/
+/out/
+/public/
 
 # dependency lock
 **/yarn.lock

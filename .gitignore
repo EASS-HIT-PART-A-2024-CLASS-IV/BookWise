@@ -28,7 +28,6 @@
 /build/
 /dist/
 /out/
-/public/
 
 # dependency lock
 **/yarn.lock
@@ -39,7 +38,6 @@
 **/build/
 **/dist/
 **/out/
-**/public/
 
 # user-specific IDE settings
 **/.vscode/

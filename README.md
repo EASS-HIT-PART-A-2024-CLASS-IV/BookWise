@@ -1,6 +1,6 @@
 <p>
-  <img src="https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/public/favicon.ico" alt="Project Logo" width="100" height="100" style="vertical-align: middle;" />
-  <span style="font-size: 24px; font-weight: bold; vertical-align: middle;">BookWise</span>
+  <img src="https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/public/favicon.ico" alt="Project Logo" width="70" height="70" />
+  <span style="font-size: 40px; font-weight: bold;">BookWise</span>
 </p>
 
 

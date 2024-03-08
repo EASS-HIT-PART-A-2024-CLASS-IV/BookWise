@@ -47,11 +47,11 @@ const RegistrationForm = ({  }) => {
                             <h2>Register</h2>
                             <div className="input-field">
                                 <label htmlFor="username">Username:</label>
-                                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} name="username" required />
+                                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} name="username" autoComplete="off" required />
                             </div>
                             <div className="input-field">
                                 <label htmlFor="email">Email:</label>
-                                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" required />
+                                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" autoComplete="off" required />
                             </div>
                             <div className="input-field">
                                 <label htmlFor="password">Password:</label>

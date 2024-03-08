@@ -1,4 +1,4 @@
-![Logo]([https://path_to_your_logo/logo.png "Project Logo"](https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/src/images/logo1.png))
+
 
 # BookWise
 

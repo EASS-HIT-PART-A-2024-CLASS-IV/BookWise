@@ -57,7 +57,7 @@ const LoginForm = ({ onLogin }) => {
                             <h2>Login</h2>
                             <div className="input-field">
                                 <label htmlFor="username">Username:</label>
-                                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} name="username" />
+                                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} name="username" autoComplete="off" />
                             </div>
                             <div className="input-field">
                                 <label htmlFor="password">Password:</label>

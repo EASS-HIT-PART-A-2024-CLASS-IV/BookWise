@@ -1,6 +1,8 @@
 
 
-![Logo](https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/public/favicon.ico)) # BookWise
+![Logo](https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/public/favicon.ico)
+<img src="https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/BookWise/blob/main/frontend/public/favicon.ico" alt="Project Logo" width="100" height="100">
+# BookWise
 
 BookWise is a comprehensive book management system that provides users with the ability to explore, save, and manage their favorite books. Built using FastAPI for the backend, it offers a robust and efficient API for handling book data. Features include user authentication, book search, and user-specific booklists.
 

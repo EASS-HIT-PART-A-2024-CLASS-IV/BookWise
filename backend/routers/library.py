@@ -9,6 +9,7 @@ from .dep import get_current_user
 router = APIRouter()
 
 GOOGLE_BOOKS_API_KEY = "AIzaSyCs5bX3a2DOUYeCkOoEUxm_UhQ6uElcjfc"
+
 class BookRequest(BaseModel):
     query: str
 
@@ -36,17 +37,21 @@ def get_user_books(user_id: int, db: Session = Depends(get_db)):
     return actions.get_user_books(db, user_id)
 
 @router.post("/save-book")
-async def save_book(request: Request, db: Session = Depends(get_db), current_user_id: int = Depends(get_current_user)):
+async def save_book(
+    request: Request,
+    db: Session = Depends(get_db),
+    current_user_id: int = Depends(get_current_user),
+):
     try:
         data = await request.json()
         saved_book = await actions.save_book(
             db,
-            user_id=current_user_id, 
+            user_id=current_user_id,
             book_title=data.get("book_title"),
             author=data.get("author"),
             book_id=data.get("book_id"),
             descriptions=data.get("descriptions"),
-            images=data.get("images")
+            images=data.get("images"),
         )
         return saved_book
     except Exception as e:
@@ -61,7 +66,6 @@ def remove_book(user_id: int, book_id: str, db: Session = Depends(get_db)):
         if not actions.is_book_saved_by_user(db, user_id, book_id):
             raise HTTPException(status_code=404, detail="Book not found in user's list")
         actions.remove_book_from_user_list(db, user_id, book_id)
-
         return {"message": "Book removed successfully"}
     except Exception as e:
         print(f"Error removing book: {e}")

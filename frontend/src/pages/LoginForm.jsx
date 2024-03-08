@@ -9,7 +9,6 @@ const LoginForm = ({ onLogin }) => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
     const handleLogin = async () => {
-        console.log("handleLogin function called");
         try {
             const formData = new FormData();
             formData.append('username', username);
@@ -20,7 +19,6 @@ const LoginForm = ({ onLogin }) => {
             });
 
             if (response.ok) {
-                console.log('Login successful');
                 const responseData = await response.json();
                 localStorage.setItem('accessToken', responseData.access_token);
                 onLogin(); 

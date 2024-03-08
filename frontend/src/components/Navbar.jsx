@@ -8,7 +8,6 @@ const AppNavbar = ({ isLoggedIn, userId, handleLogoutSuccess }) => {
     const navigate = useNavigate();     
     const handleLogout = () => {
         localStorage.removeItem('accessToken');
-        console.log('Logout successful');
         handleLogoutSuccess(); 
         navigate('/');
         window.location.reload();

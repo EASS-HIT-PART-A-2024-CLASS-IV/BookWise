@@ -33,11 +33,15 @@ def register(user_data: dict, db: Session = Depends(get_db)):
     return actions.create_user(db, username, email, hashed_password)
 
 @router.post("/login", response_model=Token)
-def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+def login_for_access_token(
+    form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
+):
 
     user = actions.check_username(db, username=form_data.username)
-    if user and authentication.verify_password(form_data.password, user.hashed_password):
-        print("user loggin in succesfully")
+    if user and authentication.verify_password(
+        form_data.password, user.hashed_password
+    ):
+        print("user logged in succesfully")
 
     if not user:
         raise HTTPException(
@@ -49,15 +53,15 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
     access_token = create_access_token(
         data={"sub": user.username}, expires_delta=access_token_expires
     )
-    
+
     return Token(access_token=access_token, token_type="bearer")
 
 @router.get("/list-users")
 def list_users(db: Session = Depends(get_db)):
     users_list = actions.get_all_users(db)
+    print(f"list-of-users:")
     for user in users_list:
-        print(f"list-users Username details: {user.username}")
-
+        print(f" {user.username},")
     if not users_list:
         print("no users exist yet")
 

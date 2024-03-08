@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = "mysql+mysqlconnector://root:root@database:3306/mydb"
@@ -13,4 +13,3 @@ def get_db():
         yield db
     finally:
         db.close()
-

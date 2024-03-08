@@ -10,7 +10,6 @@ const Cards = () => {
     const [savedBooks, setSavedBooks] = useState([]);
     const [userId, setUserId] = useState(null);
     const handleReadMoreClick = (bookId, userId) => {
-        console.log("from cards", bookId, userId)
         navigate(`/book/${bookId}`);
     };
 
@@ -42,7 +41,6 @@ const Cards = () => {
 
             const userData = await userResponse.json();
             setUserId(userData.id);
-            console.log('current-user id:', userId);
             const response = await fetch('http://localhost:8080/save-book', {
                 method: 'POST',
                 headers: {
@@ -64,7 +62,6 @@ const Cards = () => {
             }
 
             setResults((prevResults) => [...prevResults, newSavedBook]);
-            console.log('Book added to list:', newSavedBook);
         } catch (error) {
             console.error('Error saving book:', error);
         }

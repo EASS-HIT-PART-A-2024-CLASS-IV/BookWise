@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import AppNavbar from '../components/Navbar'; 
 import LoggedUser from '../components/LoggedUser';
 import Guest from '../components/Guest';
@@ -7,7 +6,6 @@ import Guest from '../components/Guest';
 const Home = ({ isLoggedIn }) => {
   const [userId, setUserId] = useState(null);
   const [username, setUsername] = useState(null);
-  const navigate = useNavigate();
   const fetchCurrentUser = async () => {
     const accessToken = localStorage.getItem('accessToken');
     try {
@@ -46,23 +44,12 @@ const Home = ({ isLoggedIn }) => {
     }
   }, [isLoggedIn]);
 
-  const navigateToSavedBooks = () => {
-    if (userId) {
-      navigate(`/savedbooks/${userId}`);
-    }
-  };
-
   const handleLogoutSuccess = () => {
-    console.log('Logout success');
     localStorage.removeItem('accessToken');
     setUserId(null);
     setUsername(null);
   };
 
-  const [searchResults, setSearchResults] = useState(null);
-  const updateSearchResults = (results) => {
-    setSearchResults(results);
-  };
 
   return (
     <>
@@ -74,7 +61,6 @@ const Home = ({ isLoggedIn }) => {
       ) : (
         <>
           <Guest /> 
-
         </>
       )}
     </>

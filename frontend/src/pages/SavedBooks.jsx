@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import AppNavbar from '../components/Navbar';
 import '../components/styles.css';
 import { AiOutlineDelete } from "react-icons/ai";
 import { FaArrowLeft } from "react-icons/fa";
 import Modal from './Modal';
-
 
 const SavedBooks = ({ isLoggedIn }) => {
     const { id } = useParams();
@@ -54,7 +53,6 @@ const SavedBooks = ({ isLoggedIn }) => {
                 const data = await response.json();
                 setUserBooks(data);
 
-                console.log('User books:', data);
             } catch (error) {
                 console.error('Error fetching user books:', error);
             }
@@ -64,7 +62,6 @@ const SavedBooks = ({ isLoggedIn }) => {
     }, [id]);
 
     const handleLogoutSuccess = () => {
-        console.log('Logout success');
         localStorage.removeItem('accessToken');
     };
 

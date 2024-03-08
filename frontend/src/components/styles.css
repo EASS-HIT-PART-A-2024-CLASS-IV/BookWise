@@ -258,8 +258,6 @@ color: black;
         max-width: calc(100% - 20px);
     }
 }
-
-
 .book-details {
     padding: 3rem 0;
 }
@@ -322,21 +320,6 @@ color: black;
         max-width: 100%;
     }
 }
-/* 
-mark {
-    margin: 0 -0.4em;
-    padding: 0.1em 0.4em;
-    border-radius: 0.8em 0.3em;
-    background: transparent;
-    background-image: linear-gradient(to right,
-            rgba(213, 237, 246, 0.1),
-            rgba(0, 0, 0, 0.2) 20%,
-            rgba(213, 237, 246, 0.2));
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-} */
-
-
 .modalBackground {
     position: fixed;
     top: 0;
@@ -348,7 +331,6 @@ mark {
     justify-content: center;
     align-items: center;
 }
-
 .modalContainer {
     width: 500px;
     max-width: 90%;
@@ -358,13 +340,11 @@ mark {
     padding: 20px;
     text-align: center;
 }
-
 .titleCloseBtn {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2px;
 }
-
 .titleCloseBtn button {
     background-color: transparent;
     border: none;

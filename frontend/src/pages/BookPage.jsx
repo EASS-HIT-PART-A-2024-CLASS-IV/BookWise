@@ -37,7 +37,6 @@ const BookPage = ({ isLoggedIn }) => {
 
         const userData = await userResponse.json();
         setUserId(userData.id);
-        console.log('current-user id:', userData.id);
       } catch (error) {
         console.error('Error fetching current user:', error);
       }
@@ -69,7 +68,7 @@ const BookPage = ({ isLoggedIn }) => {
                 </button>
                 <div className='book-details-content grid'>
                   <div className='book-details-img'>
-                    <img src={book.volumeInfo.imageLinks?.thumbnail || 'placeholder-image-url'} alt="cover image" />
+                    <img src={book.volumeInfo.imageLinks?.thumbnail || 'placeholder-image-url'} />
                   </div>
                   <div className='book-details-info'>
                     <div className='book-details-item title'>

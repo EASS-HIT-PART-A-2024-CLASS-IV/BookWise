@@ -19,7 +19,6 @@ const SearchBar = () => {
             if (response.ok) {
                 const data = await response.json();
                 setResults(data.items || []);
-                console.log('Search Results:', data.items);
             } else {
                 console.error('Error:', response.statusText);
             }

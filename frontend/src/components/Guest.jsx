@@ -18,8 +18,8 @@ function Guest() {
           <h2 className='header-title text-capitalize'>Hey, reader!</h2><br /><br />
           <p className='header-text fs-18 fw-3'>Welcome to our library. Start exploring our vast collection of books today. Whether you're into mysteries, romance, or science fiction, there's something here for everyone. Join our community today and start your literary journey!</p>
           <div className="header-horizontal-buttons">
-            <button className="button-51" role="button" onClick={handleRegister}>Register</button>
-            <button className="button-51" role="button" onClick={handleLogin}>Login</button>   
+            <button className="button-51" onClick={handleRegister}>Register</button>
+            <button className="button-51" onClick={handleLogin}>Login</button>   
           </div>
         </div>
       </header>

@@ -10,7 +10,6 @@ const RegistrationForm = ({  }) => {
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
     const handleRegister = async () => {
-        console.log("handleRegister function called");
         try {
             const response = await fetch('http://localhost:8080/register', {
                 method: 'POST',
@@ -21,7 +20,6 @@ const RegistrationForm = ({  }) => {
             });
 
             if (response.ok) {
-                console.log('User registered successfully');
                 navigate('/login');
 
             } else {
@@ -41,7 +39,7 @@ const RegistrationForm = ({  }) => {
             <header>
                 <AppNavbar />
                 <div className='header-content3 flex flex-c text-left '>
-                    <div class="wrapper">
+                    <div className="wrapper">
                         <form onSubmit={(e) => {
                             e.preventDefault(); 
                             handleRegister();

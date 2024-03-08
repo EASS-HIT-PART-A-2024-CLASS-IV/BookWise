@@ -61,27 +61,21 @@ input {
 .text-capitalize {
     text-transform: capitalize;
 }
-
 .text-italic {
     font-style: italic;
 }
-
 .fw-3 {
     font-weight: 300;
 }
-
 .fw-6 {
     font-weight: 600;
 }
-
 .fs-18 {
     font-size: 1.8rem;
 }
-
 .fs-24 {
     font-size: 2.4rem;
 }
-
 .flex {
     display: flex;
     align-items: center;
@@ -92,11 +86,9 @@ input {
 .flex-sb {
     justify-content: space-between;
 }
-
 .flex-c {
     justify-content: center;
 }
-
 .grid {
     display: grid;
 }

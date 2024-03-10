@@ -6,7 +6,7 @@ BookWise is a comprehensive book management system that provides users with the 
 ## Features
 
 - **User Authentication:** Secure login and registration system to manage user sessions.
-- **Book Search:** Leverage Google Books API to search for books by titles, authors, or ISBN.
+- **Book Search:** Leverage Google Books API to search for books by titles, authors etc.
 - **Personal Booklist:** Allows users to save their favorite books and manage their personal booklist.
 
 ## Getting Started
